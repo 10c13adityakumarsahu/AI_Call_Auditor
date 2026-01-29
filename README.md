@@ -2,7 +2,7 @@
 
 **AI Call Auditor** is a comprehensive tool designed to automate the quality assurance process for customer support interactions. Leveraging advanced Generative AI and Retrieval-Augmented Generation (RAG), it audits audio calls and chat logs against company policies, providing detailed insights, scoring, and compliance reports.
 
-## 🚀 Features
+##  Features
 
 -   **Multi-Format Support**: Upload and analyze both audio files (`.mp3`, `.wav`) and chat logs (`.txt`, `.json`).
 -   **Automated Transcription & Diarization**: Uses **OpenAI Whisper** for high-accuracy transcription and **Senko** for speaker diarization (processed on CPU/GPU).
@@ -13,7 +13,7 @@
 -   **Audit History**: Stores all audit logs in a local **SQLite** database for historical tracking.
 -   **Policy Management**: View and manage the active company policy directly from the UI.
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 AI-Call-Auditor/
@@ -35,7 +35,7 @@ AI-Call-Auditor/
     └── database/           # SQLite database file location
 ```
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 -   **Frontend**: Streamlit
 -   **AI/LLM**: Google Gemini API, OpenAI Whisper, Senko (Diarization)
@@ -43,7 +43,7 @@ AI-Call-Auditor/
 -   **Backend/Utils**: Python, Pandas, SQLite
 -   **Reporting**: FPDF (PDF generation), SMTP (Email)
 
-## 📋 Prerequisites
+## Prerequisites
 
 -   **Python 3.10+** (Recommended)
 -   **FFmpeg**: Required for audio processing.
@@ -53,7 +53,7 @@ AI-Call-Auditor/
 -   **Google Gemini API Key**: Get one from [Google AI Studio](https://aistudio.google.com/).
 -   **Git**: To clone the repository.
 
-## ⚙️ Installation
+## Installation
 
 1.  **Clone the Repository**
     ```bash
@@ -85,7 +85,7 @@ AI-Call-Auditor/
     # SENDER_PASS=your_app_password
     ```
 
-## 🚀 Usage
+## Usage
 
 1.  **Start the Application**
     ```bash
@@ -107,17 +107,17 @@ AI-Call-Auditor/
     -   View past audits in the **Audit History** tab.
     -   Reset system data from the Sidebar if needed.
 
-## 📝 Policy Customization
+## Policy Customization
 
 To audit against your specific company guidelines, simply edit the text file located at:
 `policies/company_policy.txt`
 
 The RAG engine will automatically re-index the new policy content on the next run.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please fork the repository and submit a Pull Request.
 
-## 📄 License
+## License
 
 [MIT License](LICENSE)
