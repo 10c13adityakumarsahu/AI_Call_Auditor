@@ -5,10 +5,10 @@ import google.generativeai as genai
 class Auditor:
     def __init__(self, gemini_key=None):
         self.gemini_key = gemini_key or os.getenv("GEMINI_API_KEY")
-        
+        self.model = os.getenv("MODEL") 
         if self.gemini_key:
             genai.configure(api_key=self.gemini_key)
-            self.gemini_model = genai.GenerativeModel('gemini-3-flash-preview')
+            self.gemini_model = genai.GenerativeModel(self.model,default='gemini-3-flash-preview')
 
     def audit_interaction(self, transcript_text, policy_context):
         """
